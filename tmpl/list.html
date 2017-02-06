@@ -1,0 +1,31 @@
+<style>
+    .list-panel{
+        width: 25%;
+        height: 270px;
+        margin: 20px;
+    }
+    .panel-body{
+        width: 80%;
+        height: 70%;
+        margin: 0 auto;
+    }
+    .panel-body img{
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="panel panel-warning pull-left list-panel" ng-repeat="book in books">
+        <div class="panel-heading text-center">
+            {{book.bookName}}
+        </div>
+        <div class="panel-body">
+            <img ng-src="{{book.bookCover}}" alt="">
+        </div>
+        <div class="panel-footer">
+            <span>价格：{{book.bookPrice}}<a href="#!/detail/{{book.id}}" class="pull-right">详情</a></span>
+        </div>
+    </div>
+</div>

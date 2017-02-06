@@ -1,0 +1,39 @@
+<style>
+    .panel{
+        margin-top: 20px;
+    }
+    .h3 {
+        margin: 0;
+    }
+    .panel-body img {
+        width: 50%;
+    }
+
+    .panel-footer {
+        height: 55px;
+    }
+
+    .panel-footer .h3 {
+        line-height: 37px;
+    }
+</style>
+<div class="panel panel-warning pull-left list-panel">
+    <div class="panel-heading text-center h3" ng-show="flag">
+        {{book.bookName}}
+    </div>
+    <div class="panel-heading" ng-hide="flag">
+        <input type="text" ng-hide="flag" ng-model="book.bookName">
+    </div>
+    <div class="panel-body text-center">
+        <img ng-src="{{book.bookCover}}" alt="">
+    </div>
+    <div class="panel-footer">
+        <span class="h3" ng-show="flag">价格：{{book.bookPrice}}</span>
+        <span ng-hide="flag">价格：<input type="text" ng-model="book.bookPrice"></span>
+        <span class="pull-right" ng-show="flag"><a href="javascript:;" class="btn btn-warning btn-sm"
+                                                   ng-click="xiugai()">修改</a>&nbsp;&nbsp;<a href="javascript:;"
+                                                                                            class="btn btn-danger btn-sm"
+                                                                                            ng-click="removeBook()">删除</a></span>
+        <span class="btn btn-sm btn-danger" ng-hide="flag" ng-click="updateDate()">提交</span>
+    </div>
+</div>
