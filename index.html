@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>BookStore</title>
-    <link rel="stylesheet" href="https://github.com/ZLSelina/bookStore/blob/master/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.0.0/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -17,11 +17,11 @@
     </nav>
     <div ng-view="" class="container"></div>
 </div>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-route/angular-route.js"></script>
-<script src="node_modules/angular-resource/angular-resource.js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/angular-route-segment/1.5.1/angular-route-segment.min.js"></script>
+<script src="http://cdn.bootcss.com/angular-resource/1.6.1/angular-resource.min.js"></script>
 <script>
     let app=angular.module('appModule',['ngResource','ngRoute']);
     app.factory('$book',['$resource',function($resource){
